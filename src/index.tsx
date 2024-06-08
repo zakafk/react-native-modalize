@@ -225,6 +225,7 @@ const ModalizeBase = (
     alwaysOpenValue: number | undefined,
     dest: TOpen = 'default',
   ): void => {
+    dragY.setValue(0);
     const { timing, spring } = openAnimationConfig;
 
     (backButtonListenerRef as any).current = BackHandler.addEventListener(
